@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "test": "jest",
+    "generate-swagger": "npx swagger-jsdoc -d swaggerDef.js -o swagger.yaml"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.445.0",
+    "@aws-sdk/client-s3": "^3.445.0",
+    "@hapi/joi": "^17.1.1",
+    "axios": "^1.6.1",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "serverless-apigw-binary": "^0.4.4",
+    "serverless-offline": "^13.2.1",
+    "swagger-jsdoc": "^6.2.8"
+  }
+}

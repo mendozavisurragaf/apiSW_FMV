@@ -1,0 +1,46 @@
+service: apistarwars
+
+frameworkVersion: "3"
+
+plugins:
+  - serverless-apigw-binary
+  - serverless-offline
+
+custom:
+  apigwBinary:
+    types:
+      - "*/*"
+
+package:
+  individually: true
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .git/**
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+
+functions:
+  obtenerPlanetaSwapi:
+    handler: src/controller/SwapController.obtenerPlanetaSWApi
+    events:
+      - http:
+          path: /swapi/planeta/{id}
+          method: GET
+
+  obtenerPlanetaAws:
+    handler: src/controller/swapController.obtenerPlaneta
+    events:
+      - http:
+          path: /planeta/{id}
+          method: GET
+
+  guardarPlanetaAws:
+    handler:  src/controller/swapController.guardarPlaneta
+    events:
+      - http:
+          path: /planeta
+          method: POST
