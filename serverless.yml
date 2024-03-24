@@ -10,6 +10,9 @@ custom:
   apigwBinary:
     types:
       - "*/*"
+  settings:
+    ACCESS_KEY: AKIARRLCVBZE37WPBIRC
+    SECRET_KEY: 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
 
 package:
   individually: true
@@ -22,6 +25,8 @@ provider:
   name: aws
   runtime: nodejs18.x
   region: us-east-1
+  environment: ${self:custom.settings}
+
 
 functions:
   obtenerPlanetaSwapi:

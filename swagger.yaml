@@ -5,7 +5,7 @@ info:
   description: Descripción de la API de SwapInfo
 
 paths:
-  /swapi/planets/{id}:
+  /swapi/planeta/{id}:
     get:
       summary: Obtener información de un planeta por su ID desde SWAPI
       parameters:
@@ -25,39 +25,28 @@ paths:
                 properties:
                   nombre:
                     type: string
-                  altura:
+                  periodo_rotacion:
                     type: string
-                  masa:
+                  periodo_orbital:
                     type: string
-                  color_cabello:
+                  diametro:
                     type: string
-                  color_piel:
+                  clima:
                     type: string
-                  color_ojos:
+                  gravedad:
                     type: string
-                  anio_nacimiento:
+                  terreno:
                     type: string
-                  sexo:
+                  agua_superficial:
                     type: string
-                  mundo_natal:
+                  poblacion:
                     type: string
-                    format: uri
+                  residentes:
+                    type: array
+                    items:
+                      type: string
+                      format: uri
                   peliculas:
-                    type: array
-                    items:
-                      type: string
-                      format: uri
-                  especies:
-                    type: array
-                    items:
-                      type: string
-                      format: uri
-                  vehiculo:
-                    type: array
-                    items:
-                      type: string
-                      format: uri
-                  naves_estelares:
                     type: array
                     items:
                       type: string
@@ -71,7 +60,7 @@ paths:
                   url:
                     type: string
                     format: uri
-  /aws/planets/{id}:
+  /planeta/{id}:
     get:
       summary: Obtener información de un planeta por su ID desde AWS
       parameters:
@@ -91,43 +80,32 @@ paths:
                 properties:
                   nombre:
                     type: string
-                  altura:
+                  periodo_rotacion:
                     type: string
-                  masa:
+                  periodo_orbital:
                     type: string
-                  color_cabello:
+                  diametro:
                     type: string
-                  color_piel:
+                  clima:
                     type: string
-                  color_ojos:
+                  gravedad:
                     type: string
-                  anio_nacimiento:
+                  terreno:
                     type: string
-                  sexo:
+                  agua_superficial:
                     type: string
-                  mundo_natal:
+                  poblacion:
                     type: string
-                    format: uri  # Si es una URL, puedes definir el formato
+                  residentes:
+                    type: array
+                    items:
+                      type: string
+                      format: uri
                   peliculas:
                     type: array
                     items:
                       type: string
                       format: uri  # Si son URLs, también puedes definir el formato
-                  especies:
-                    type: array
-                    items:
-                      type: string
-                      format: uri
-                  vehiculo:
-                    type: array
-                    items:
-                      type: string
-                      format: uri
-                  naves_estelares:
-                    type: array
-                    items:
-                      type: string
-                      format: uri
                   creado:
                     type: string
                     format: date-time  # Define el formato de fecha y hora
@@ -137,7 +115,7 @@ paths:
                   url:
                     type: string
                     format: uri
-  /aws/new/planet:
+  /planeta:
     post:
       summary: Agregar un nuevo planeta a través de AWS
       requestBody:

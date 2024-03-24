@@ -4,8 +4,9 @@ const {DynamoDBClient, PutItemCommand, GetItemCommand} = require('@aws-sdk/clien
 const tableName = 'PlanetasStarWars';
 const getDynamoDBClient = () => {
     const credentials = {
-        accessKeyId: 'AKIARRLCVBZE37WPBIRC',
-        secretAccessKey: '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'
+        accessKeyId: process.env.ACCESS_KEY,
+        secretAccessKey: process.env.SECRET_KEY
+
     };
 
     return new DynamoDBClient({
