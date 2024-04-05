@@ -11,8 +11,8 @@ custom:
     types:
       - "*/*"
   settings:
-    ACCESS_KEY: AKIARRLCVBZE37WPBIRC
-    SECRET_KEY: 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
+    ACCESS_KEY: 
+    SECRET_KEY: 
 
 package:
   individually: true
